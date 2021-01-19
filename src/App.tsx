@@ -29,10 +29,11 @@ const App = () => {
           <button className="btn btn-red" onClick={ resetHandler }>{isRunning ? 'Stop' : 'Reset'}</button>
         </div>
         <div className="cell-container">
-          { cellData && cellData.map((item) => (
-            <Cell 
+          { cellData && cellData.map((item, index) => (
+            <Cell
               {...item}
               onClick={ cellClickHandler }
+              key={index}
             />
           )) }
         </div>
